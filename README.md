@@ -15,7 +15,9 @@ tqdm <br />**
 
 Here is how to run the scripts. For deterministic estimation, run <br />
 > time THEANO_FLAGS='device=cuda0,floatX=float32' python MESCNetSepDict.py < list of training normalized diffusion images> < list of training brain mask images > < number of microstructure meaasures to be estimated > < list of training microstructure 1 > ... < list of training microstructure N > < list of test normalized diffusion images > < list of test brain mask images > < input patch size > < output patch size > < upsampling rate > < size of angular dictionary > < size of spatial dictionary > < output directory > <br />
+
 (Note that the upsampling rate is for future extension and it is set to one in this case.)
+
 For example, <br />
 > time THEANO_FLAGS='device=cuda0,floatX=float32' python MESCNetSepDict.py dwis_1.txt masks_1.txt 3 icvfs_1.txt isos_1.txt ods_1.txt dwis_2.txt masks_2.txt 3 1 1 300 300 temp_out <br />
 
